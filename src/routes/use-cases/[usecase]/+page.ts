@@ -47,8 +47,7 @@ const healthcareUseCase: UseCase = {
 	hero: {
 		title: "Healthcare Innovation Platform",
 		subtitle: "Empowering providers to deliver better patient care",
-		imageSrc:
-			"https://images.unsplash.com/photo-1532938911079-1b06ac7ceec7?q=80&w=1920&auto=format&fit=crop",
+		imageSrc: "/uploaded/1750368505687-5eylo48.png",
 		callsToAction: [
 			{ href: "/demo", label: "Get Started" },
 			{ href: "#features", label: "Learn More" }
@@ -121,8 +120,7 @@ const financeUseCase: UseCase = {
 	hero: {
 		title: "Financial Intelligence Platform",
 		subtitle: "Empowering financial decisions with data-driven insights",
-		imageSrc:
-			"https://images.unsplash.com/photo-1638913662180-afc4334cf422?q=80&w=3870&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+		imageSrc: "/uploaded/1750368505688-er2tl1f.png",
 		callsToAction: [
 			{ href: "/demo", label: "Get Started" },
 			{ href: "#features", label: "Learn More" }
@@ -196,8 +194,7 @@ const technologyUseCase: UseCase = {
 	hero: {
 		title: "Technology Innovation Hub",
 		subtitle: "Accelerate your digital transformation journey",
-		imageSrc:
-			"https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+		imageSrc: "/uploaded/1750368505689-p366l6x.png",
 		callsToAction: [
 			{ href: "/demo", label: "Get Started" },
 			{ href: "#features", label: "Explore Features" }

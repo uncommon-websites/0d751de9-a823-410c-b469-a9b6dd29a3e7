@@ -13,6 +13,7 @@
 <CenteredTextOnlyHero
 	title="Infra is a beast"
 	imageSrc="/generated/image-a-group-of-people-sitting-around-a-moder.webp"
+	callsToAction={[]}
 />
 <LogoScroller 
 	label="Trusted by industry leaders"

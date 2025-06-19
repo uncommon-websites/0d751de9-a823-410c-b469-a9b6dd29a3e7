@@ -11,7 +11,7 @@
 </script>
 
 <CenteredTextOnlyHero
-	title="Infrastructure moves super duper fast. Now you can too."
+	title="Infra is a beast"
 	imageSrc="/generated/image-a-group-of-people-sitting-around-a-moder.webp"
 />
 <LogoScroller 

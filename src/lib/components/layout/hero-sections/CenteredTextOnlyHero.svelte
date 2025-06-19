@@ -17,7 +17,7 @@ Takes up the full viewport height and centers content vertically.
 	// Types
 	type Props = {
 		title: string;
-		subtitle: string;
+		subtitle?: string;
 		imageSrc: string;
 		callsToAction?: Array<{
 			href: string;
@@ -48,16 +48,18 @@ Takes up the full viewport height and centers content vertically.
 			data-enter-container
 		>
 			<div class="grid max-w-prose place-items-center justify-center gap-6 lg:max-w-[80ch]">
-				<h1 class="text-display w-full text-balance lg:!text-7xl dark:text-shadow-lg" data-enter>
+				<h1 class="text-display w-full text-balance lg:!text-7xl dark:text-shadow-lg font-black text-red-600" data-enter>
 					<span class="block"><AnimateText text={title} /></span>
 				</h1>
 
-				<p
-					data-enter
-					class="text-headline block max-w-[45ch] text-pretty opacity-80 transition duration-500 ease-out dark:text-shadow-lg"
-				>
-					{subtitle}
-				</p>
+				{#if subtitle}
+					<p
+						data-enter
+						class="text-headline block max-w-[45ch] text-pretty opacity-80 transition duration-500 ease-out dark:text-shadow-lg"
+					>
+						{subtitle}
+					</p>
+				{/if}
 			</div>
 
 			{#if callsToAction.length > 0}

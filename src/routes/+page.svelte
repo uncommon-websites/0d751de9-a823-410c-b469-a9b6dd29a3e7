@@ -11,7 +11,7 @@
 </script>
 
 <CenteredTextOnlyHero
-	title="Infra is a beast"
+	title="Krish Nerkar"
 	imageSrc="/generated/image-a-group-of-people-sitting-around-a-moder.webp"
 	callsToAction={[]}
 />

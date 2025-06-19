@@ -8,6 +8,7 @@
 	import AboutTeaser from "$lib/components/layout/AboutTeaser.svelte";
 	import LogoScroller from "$lib/components/layout/LogoScroller.svelte";
 	import SidebarNavigationHero from "$lib/components/layout/hero-sections/SidebarNavigationHero.svelte";
+	import InfrastructureHero from "$lib/components/layout/InfrastructureHero.svelte";
 </script>
 
 <SidebarNavigationHero
@@ -117,6 +118,9 @@
 />
 
 <AboutTeaser />
+
+<InfrastructureHero />
+
 <CallToAction 
 	title="Have a use case in mind?"
 	subtitle="Let's talk"

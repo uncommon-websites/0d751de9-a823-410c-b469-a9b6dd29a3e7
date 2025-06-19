@@ -7,13 +7,34 @@
 	import CallToAction from "$lib/components/layout/CallToAction.svelte";
 	import AboutTeaser from "$lib/components/layout/AboutTeaser.svelte";
 	import LogoScroller from "$lib/components/layout/LogoScroller.svelte";
-	import CenteredTextOnlyHero from "$lib/components/layout/hero-sections/CenteredTextOnlyHero.svelte";
+	import SidebarNavigationHero from "$lib/components/layout/hero-sections/SidebarNavigationHero.svelte";
 </script>
 
-<CenteredTextOnlyHero
-	title="Krish Nerkar"
-	imageSrc="/uploaded/1750370047102-4atg11v.png"
-	callsToAction={[]}
+<SidebarNavigationHero
+	title="Automate workflows with AI agents"
+	subtitle="Deploy critical physical infrastructure faster with AI-native tooling and agentic automation designed for the built world."
+	navigationItems={[
+		{ label: "AI + Infrastructure", active: true },
+		{ label: "Site Selection" },
+		{ label: "Due Diligence" },
+		{ label: "Permitting" },
+		{ label: "Utilities" }
+	]}
+	productOptions={[
+		{
+			icon: "🏗️",
+			title: "Build Agents for infrastructure",
+			subtitle: "Automate development workflows",
+			href: "/agents"
+		},
+		{
+			icon: "📊",
+			title: "Analytics Platform",
+			subtitle: "Real-time project insights",
+			href: "/analytics"
+		}
+	]}
+	pickYourProductLabel="Pick your solution"
 />
 <LogoScroller 
 	label="Trusted by industry leaders"

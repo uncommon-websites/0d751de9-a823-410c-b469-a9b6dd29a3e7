@@ -68,31 +68,41 @@
 <div class="" {...rest}>
 	<section class="section-px section-py container mx-auto">
 		<div
-			class="bg-card border-border grid content-start items-center justify-between gap-(--gap) rounded-(--radius) border p-(--gap) text-balance [--gap:--spacing(8)] [--inner-radius:calc(var(--radius)-var(--gap))] [--radius:var(--radius-xl)] lg:grid-cols-[2fr_1fr]"
+			class="bg-gray-900 text-white grid content-start items-center justify-between gap-0 rounded-2xl overflow-hidden lg:grid-cols-[1fr_1fr] min-h-[500px]"
 		>
-			<div class="items-between grid h-full content-between gap-16">
-				<h2 class="text-title1 mb-3 flex flex-col">
-					<span><AnimateText text={title} /></span>
-					<span class="text-emphasis-low"><AnimateText text={subtitle} /></span>
-				</h2>
-				<div class="flex flex-col items-start justify-start gap-7">
-					<p class="text-headline text-emphasis-low">
+			<div class="flex flex-col justify-center gap-8 p-12 lg:p-16">
+				<div class="flex flex-col gap-4">
+					<h2 class="text-4xl lg:text-5xl font-medium leading-tight">
+						<AnimateText text={title} />
+					</h2>
+					<h3 class="text-2xl lg:text-3xl font-light text-gray-300">
+						<AnimateText text={subtitle} />
+					</h3>
+				</div>
+				<div class="flex flex-col gap-6">
+					<p class="text-sm text-gray-400 leading-relaxed">
 						{description}
 					</p>
-					<div class="flex flex-col md:flex-row md:flex-wrap gap-2 w-full">
+					<div class="flex flex-col sm:flex-row gap-3">
 						{#each callsToAction as cta}
-							<Button class="w-full md:w-auto" href={cta.href} variant={cta.variant || "primary"}
-								>{cta.label}</Button
+							<Button 
+								class="bg-white text-gray-900 hover:bg-gray-100 border-0 px-6 py-3 rounded-full font-medium" 
+								href={cta.href} 
+								variant="secondary"
 							>
+								{cta.label}
+							</Button>
 						{/each}
 					</div>
 				</div>
 			</div>
-			<img
-				src={imageSrc}
-				alt="Visual comparison showing product benefits"
-				class="hidden aspect-[4/5] size-full max-h-full w-full rounded-[calc(max(var(--inner-radius),.25rem))] object-cover lg:block"
-			/>
+			<div class="relative h-full min-h-[400px] lg:min-h-[500px]">
+				<img
+					src={imageSrc}
+					alt="Professional working with laptop"
+					class="absolute inset-0 w-full h-full object-cover"
+				/>
+			</div>
 		</div>
 	</section>
 </div>

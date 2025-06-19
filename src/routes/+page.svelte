@@ -117,4 +117,16 @@
 />
 
 <AboutTeaser />
-<CallToAction imageSrc="/uploaded/1750371207855-fekdy5l.png" />
+<CallToAction 
+	title="Have a use case in mind?"
+	subtitle="Let's talk"
+	description="You'll hear back in less than 24 hours"
+	imageSrc="/uploaded/1750371207855-fekdy5l.png"
+	callsToAction={[
+		{
+			href: "/contact",
+			label: "Book a demo",
+			variant: "primary"
+		}
+	]}
+/>

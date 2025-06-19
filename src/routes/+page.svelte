@@ -85,7 +85,7 @@
 			description:
 				"Automate repetitive tasks and connect systems to improve productivity with our industry-leading 87% time savings.",
 			image:
-				"https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2940&q=80",
+				"/uploaded/1750374481323-cphmcns.jpeg",
 			link: {
 				href: "/use-cases/workflows",
 				label: "Learn more"
@@ -96,7 +96,7 @@
 			description:
 				"Extract meaningful insights from your data with powerful analytical tools backed by proprietary AI algorithms that are 3x more accurate than competitors.",
 			image:
-				"https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2488&q=80",
+				"/uploaded/1750374481323-i0cbakw.jpeg",
 			link: {
 				href: "/use-cases/data-analysis",
 				label: "Explore analytics"
@@ -107,7 +107,7 @@
 			description:
 				"Work together seamlessly while maintaining strict data privacy standards with our zero-knowledge architecture and military-grade encryption.",
 			image:
-				"https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2940&q=80",
+				"/uploaded/1750374481324-nzttrr3.png",
 			link: {
 				href: "/use-cases/collaboration",
 				label: "See security features"

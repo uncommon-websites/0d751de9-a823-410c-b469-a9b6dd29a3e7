@@ -11,7 +11,7 @@
 </script>
 
 <CenteredTextOnlyHero
-	title="Infrastructure moves super duper fast. Now you can too."
+	title="Good Morning"
 	subtitle="Build speeds up site development workflows so your team can scale without scaling headcount."
 	imageSrc="/generated/image-a-group-of-people-sitting-around-a-moder.webp"
 />

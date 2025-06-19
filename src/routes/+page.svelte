@@ -31,26 +31,7 @@
 	text="Our technology delivers measurable results through secure, adaptable solutions that directly increase productivity and drive growth."
 />
 
-<Testimonials
-	testimonials={[
-		{
-			name: "Jane Smith",
-			position: "CTO",
-			company: "Tech Innovations",
-			quote:
-				"Their cutting-edge automation boosted our productivity by 35%.\nThe intuitive interface reduced training time and improved team adoption.",
-			image: "/uploaded/1750340239935-fftj73y.jpg"
-		},
-		{
-			name: "John Doe",
-			position: "Director of Operations",
-			company: "Global Solutions",
-			quote:
-				"Their robust security protocols gave us confidence in handling sensitive data.\nThe 24/7 support team resolved issues within hours, not days.",
-			image: "/uploaded/1750340239936-3f0nax1.png"
-		}
-	]}
-/>
+<img src="/placeholder.jpg" alt="Testimonials Image" />
 
 <Features
 	title="Features"

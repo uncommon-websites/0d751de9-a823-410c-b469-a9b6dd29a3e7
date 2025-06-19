@@ -117,4 +117,4 @@
 />
 
 <AboutTeaser />
-<CallToAction imageSrc="/uploaded/1750369704730-uetaxqd.png" />
+<CallToAction imageSrc="/uploaded/1750371207855-fekdy5l.png" />

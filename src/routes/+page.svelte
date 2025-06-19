@@ -11,9 +11,9 @@
 </script>
 
 <CenteredTextOnlyHero
-	title="Good Morning"
-	subtitle="Build speeds up site development workflows so your team can scale without scaling headcount."
+	title="Infra is a beast"
 	imageSrc="/generated/image-a-group-of-people-sitting-around-a-moder.webp"
+	callsToAction={[]}
 />
 <LogoScroller 
 	label="Trusted by industry leaders"

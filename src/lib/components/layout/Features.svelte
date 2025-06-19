@@ -33,14 +33,40 @@
 	);
 </script>
 
-<section class="[--gap:--spacing(2)]" {...rest}>
-	<div class="section-px section-py container mx-auto grid">
-		<SectionHeader {title} {subtitle} />
+<section class="features-section" {...rest}>
+	<div class="gradient-background">
+		<div class="section-px section-py container mx-auto">
+			<div class="header-container">
+				<SectionHeader {title} {subtitle} />
+			</div>
 
-		<div class="bento-grid {featureCountClass}">
-			{#each features as feature}
-				<Card {...feature} />
-			{/each}
+			<div class="features-showcase">
+				<div class="code-window">
+					<div class="window-header">
+						<div class="window-controls">
+							<span class="control red"></span>
+							<span class="control yellow"></span>
+							<span class="control green"></span>
+						</div>
+						<div class="window-title">Features</div>
+					</div>
+					<div class="code-content">
+						{#each features as feature, index}
+							<div class="feature-line">
+								<span class="line-number">{index + 1}</span>
+								<span class="feature-code">
+									<span class="keyword">feature</span>
+									<span class="function-name">{feature.title.replace(/\s+/g, '')}</span>
+									<span class="bracket">(</span>
+									<span class="string">"{feature.description}"</span>
+									<span class="bracket">)</span>
+									<span class="semicolon">;</span>
+								</span>
+							</div>
+						{/each}
+					</div>
+				</div>
+			</div>
 		</div>
 	</div>
 </section>
@@ -76,111 +102,211 @@ Usage:
 -->
 
 <style>
-	/* Base styles for the bento grid */
-	.bento-grid {
-		display: grid;
-		gap: var(--gap);
-		border-radius: var(--radius);
+	.features-section {
+		position: relative;
+		overflow: hidden;
 	}
 
-	/* Mobile layout - stack all cards */
-	.bento-grid :global(article) {
-		grid-area: auto;
+	.gradient-background {
+		background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 25%, #dc2626 50%, #7c3aed 75%, #6366f1 100%);
+		padding: 4rem 0;
+		min-height: 80vh;
+		display: flex;
+		align-items: center;
 	}
 
-	/* Media query for medium screens and up */
-	@media (min-width: 768px) {
-		/* 1 Feature */
-		.feature-count-1 {
-			grid-template-columns: 1fr;
-		}
-		.feature-count-1 :global(article:nth-child(1)) {
-			grid-column: 1 / -1;
+	.header-container {
+		text-align: center;
+		margin-bottom: 3rem;
+	}
+
+	.header-container :global(h2) {
+		color: white;
+		font-size: 3rem;
+		font-weight: 700;
+		margin-bottom: 1rem;
+		text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+	}
+
+	.header-container :global(p) {
+		color: rgba(255, 255, 255, 0.9);
+		font-size: 1.25rem;
+		text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+	}
+
+	.features-showcase {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.code-window {
+		background: #1e1e1e;
+		border-radius: 12px;
+		box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+		overflow: hidden;
+		max-width: 800px;
+		width: 100%;
+		margin: 0 auto;
+	}
+
+	.window-header {
+		background: #2d2d2d;
+		padding: 12px 16px;
+		display: flex;
+		align-items: center;
+		border-bottom: 1px solid #404040;
+	}
+
+	.window-controls {
+		display: flex;
+		gap: 8px;
+		margin-right: 16px;
+	}
+
+	.control {
+		width: 12px;
+		height: 12px;
+		border-radius: 50%;
+	}
+
+	.control.red {
+		background: #ff5f56;
+	}
+
+	.control.yellow {
+		background: #ffbd2e;
+	}
+
+	.control.green {
+		background: #27ca3f;
+	}
+
+	.window-title {
+		color: #cccccc;
+		font-size: 14px;
+		font-family: 'SF Mono', Monaco, 'Cascadia Code', 'Roboto Mono', Consolas, 'Courier New', monospace;
+	}
+
+	.code-content {
+		padding: 24px;
+		font-family: 'SF Mono', Monaco, 'Cascadia Code', 'Roboto Mono', Consolas, 'Courier New', monospace;
+		font-size: 16px;
+		line-height: 1.6;
+		background: #1e1e1e;
+	}
+
+	.feature-line {
+		display: flex;
+		align-items: center;
+		margin-bottom: 8px;
+		padding: 4px 0;
+	}
+
+	.line-number {
+		color: #6e7681;
+		width: 40px;
+		text-align: right;
+		margin-right: 24px;
+		font-size: 14px;
+		user-select: none;
+	}
+
+	.feature-code {
+		display: flex;
+		align-items: center;
+		gap: 8px;
+	}
+
+	.keyword {
+		color: #ff7b72;
+		font-weight: 600;
+	}
+
+	.function-name {
+		color: #d2a8ff;
+		font-weight: 500;
+	}
+
+	.bracket {
+		color: #79c0ff;
+	}
+
+	.string {
+		color: #a5d6ff;
+	}
+
+	.semicolon {
+		color: #f85149;
+	}
+
+	/* Mobile responsiveness */
+	@media (max-width: 768px) {
+		.gradient-background {
+			padding: 2rem 0;
+			min-height: 60vh;
 		}
 
-		/* 2 Features */
-		.feature-count-2 {
-			grid-template-columns: 1fr 1fr;
+		.header-container :global(h2) {
+			font-size: 2rem;
 		}
 
-		/* 3 Features */
-		.feature-count-3 {
-			grid-template-columns: 1fr 1fr;
-			grid-template-rows: auto auto;
-			grid-template-areas:
-				"a b"
-				"a c";
-		}
-		.feature-count-3 :global(article:nth-child(1)) {
-			grid-area: a;
-		}
-		.feature-count-3 :global(article:nth-child(2)) {
-			grid-area: b;
-		}
-		.feature-count-3 :global(article:nth-child(3)) {
-			grid-area: c;
+		.header-container :global(p) {
+			font-size: 1rem;
 		}
 
-		/* 4 Features */
-		.feature-count-4 {
-			grid-template-columns: 2fr 1fr 1fr;
-			grid-template-rows: auto auto;
-			grid-template-areas:
-				"a c d"
-				"b c d";
-		}
-		.feature-count-4 :global(article:nth-child(1)) {
-			grid-area: a;
-		}
-		.feature-count-4 :global(article:nth-child(2)) {
-			grid-area: b;
-		}
-		.feature-count-4 :global(article:nth-child(3)) {
-			grid-area: c;
-		}
-		.feature-count-4 :global(article:nth-child(4)) {
-			grid-area: d;
+		.code-window {
+			margin: 0 1rem;
 		}
 
-		/* 5 Features */
-		.feature-count-5 {
-			grid-template-columns: 1fr 1fr 1fr;
-			grid-template-rows: auto auto auto;
-			grid-template-areas:
-				"a b c"
-				"d e c";
-		}
-		.feature-count-5 :global(article:nth-child(1)) {
-			grid-area: a;
-		}
-		.feature-count-5 :global(article:nth-child(2)) {
-			grid-area: b;
-		}
-		.feature-count-5 :global(article:nth-child(3)) {
-			grid-area: c;
-		}
-		.feature-count-5 :global(article:nth-child(4)) {
-			grid-area: d;
-		}
-		.feature-count-5 :global(article:nth-child(5)) {
-			grid-area: e;
+		.code-content {
+			padding: 16px;
+			font-size: 14px;
 		}
 
-		/* 6 Features */
-		.feature-count-6 {
-			grid-template-columns: 1fr 1fr 1fr;
+		.line-number {
+			width: 30px;
+			margin-right: 16px;
 		}
 
-		/* More than 6 features */
-		.feature-count-many {
-			grid-template-columns: 1fr 1fr 1fr;
+		.feature-code {
+			gap: 4px;
+			flex-wrap: wrap;
 		}
 	}
 
-	/* For larger screens, refine the grid */
-	@media (min-width: 1024px) {
-		.feature-count-many {
-			grid-template-columns: repeat(3, 1fr);
+	/* Hover effects */
+	.feature-line {
+		transition: all 0.2s ease;
+		border-radius: 4px;
+		padding: 8px 4px;
+	}
+
+	.feature-line:hover {
+		background: rgba(255, 255, 255, 0.05);
+		transform: translateX(4px);
+	}
+
+	/* Animation for code appearance */
+	.feature-line {
+		opacity: 0;
+		animation: fadeInUp 0.6s ease forwards;
+	}
+
+	.feature-line:nth-child(1) { animation-delay: 0.1s; }
+	.feature-line:nth-child(2) { animation-delay: 0.2s; }
+	.feature-line:nth-child(3) { animation-delay: 0.3s; }
+	.feature-line:nth-child(4) { animation-delay: 0.4s; }
+	.feature-line:nth-child(5) { animation-delay: 0.5s; }
+
+	@keyframes fadeInUp {
+		from {
+			opacity: 0;
+			transform: translateY(20px);
+		}
+		to {
+			opacity: 1;
+			transform: translateY(0);
 		}
 	}
 </style>

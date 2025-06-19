@@ -12,7 +12,7 @@
 
 <CenteredTextOnlyHero
 	title="Krish Nerkar"
-	imageSrc="/generated/image-a-group-of-people-sitting-around-a-moder.webp"
+	imageSrc="/uploaded/1750370047102-4atg11v.png"
 	callsToAction={[]}
 />
 <LogoScroller 

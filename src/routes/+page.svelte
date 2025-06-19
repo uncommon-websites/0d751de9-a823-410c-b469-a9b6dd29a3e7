@@ -121,7 +121,10 @@
 	title="Have a use case in mind?"
 	subtitle="Let's talk"
 	description="You'll hear back in less than 24 hours"
-	imageSrc="/uploaded/1750374414743-qfjjohb.png"
+	imageSrcs={[
+		"/uploaded/1750375637744-7o0atq9.jpeg",
+		"/uploaded/1750375637744-8f4iajq.jpeg"
+	]}
 	callsToAction={[
 		{
 			href: "/contact",

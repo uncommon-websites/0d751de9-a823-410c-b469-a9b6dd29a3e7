@@ -54,6 +54,7 @@
 		subtitle = "Join now",
 		description = "Ready to experience the difference? Join our community of satisfied customers and see how our solution can transform your workflow. ",
 		imageSrc = "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80",
+		imageSrcs = [],
 		callsToAction = [cta],
 		...rest
 	}: {
@@ -61,6 +62,7 @@
 		subtitle?: string;
 		description?: string;
 		imageSrc?: string;
+		imageSrcs?: string[];
 		callsToAction?: CTA[];
 	} = $props();
 </script>
@@ -97,11 +99,23 @@
 				</div>
 			</div>
 			<div class="relative h-full min-h-[400px] lg:min-h-[500px]">
-				<img
-					src={imageSrc}
-					alt="Professional working with laptop"
-					class="absolute inset-0 w-full h-full object-cover"
-				/>
+				{#if imageSrcs.length > 0}
+					<div class="absolute inset-0 w-full h-full flex">
+						{#each imageSrcs as src, index}
+							<img
+								{src}
+								alt="Customer {index + 1}"
+								class="w-full h-full object-cover {index > 0 ? 'border-l border-gray-700' : ''}"
+							/>
+						{/each}
+					</div>
+				{:else}
+					<img
+						src={imageSrc}
+						alt="Professional working with laptop"
+						class="absolute inset-0 w-full h-full object-cover"
+					/>
+				{/if}
 			</div>
 		</div>
 	</section>
